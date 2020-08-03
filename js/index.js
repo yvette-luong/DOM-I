@@ -37,6 +37,102 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
+
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//a tag array
+const newArray = Array.from(document.getElementsByTagName('a'));
+// console.log(navArray)
+
+const navValues = siteContent.nav
+
+for (let i = 0; i< newArray.length; i++){
+  newArray[i].textContent = Object.values(navValues)[i];
+}
+
+const headerImg = document.getElementById('cta-img');
+headerImg.setAttribute("src", siteContent["cta"]["img-src"]);
+
+const headerText = document.getElementsByTagName('h1');//HTML Collection
+headerText[0].innerHTML = '<h1>DOM<br>Is<br>Awsome</h1>';
+
+const buttonText = document.getElementsByTagName('button');
+buttonText[0].textContent  = siteContent.cta.button;
+
+const mainImage = document.querySelector('#cta-img');
+
+const testItOut = document.getElementsByClassName('text-content'); 
+
+const subtitles = document.getElementsByTagName('h4');
+subtitles[0].textContent = siteContent["main-content"]["features-h4"]
+subtitles[1].textContent = siteContent["main-content"]["about-h4"]
+subtitles[2].textContent = siteContent["main-content"]["services-h4"]
+subtitles[3].textContent = siteContent["main-content"]["product-h4"]
+subtitles[4].textContent = siteContent["main-content"]["vision-h4"]
+
+const paragraphs = document.querySelectorAll('.main-content p'); 
+paragraphs[0].textContent = siteContent["main-content"]["features-content"]
+paragraphs[1].textContent = siteContent["main-content"]["about-content"]
+paragraphs[2].textContent = siteContent["main-content"]["services-content"]
+paragraphs[3].textContent = siteContent["main-content"]["product-content"]
+paragraphs[4].textContent = siteContent["main-content"]["vision-content"]
+
+const middleImage = document.querySelector('#middle-img');
+middleImage.setAttribute("src",siteContent["main-content"]["middle-img-src"]);
+
+const contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent.contact["contact-h4"]
+
+
+const contactParagraphs = document.querySelectorAll('.contact p');
+contactParagraphs[0].textContent = siteContent.contact.address
+contactParagraphs[1].textContent = siteContent.contact.phone
+contactParagraphs[2].textContent = siteContent.contact.email
+
+const footerParagraph = document.querySelector('footer p')
+footerParagraph.textContent = siteContent.footer.copyright;
+
+
+
+const newNav1 = document.createElement('a')
+newNav1.textContent = 'More Idea' ;
+
+const newNav2 = document.createElement('a');
+newNav2.textContent = 'More Idea' ;
+
+const navTarget = document.querySelector('nav');
+navTarget.appendChild(newNav1);
+navTarget.appendChild(newNav2); 
+
+// for(let i=0 ; i<navTarget.children.length; i++){
+//   navTarget.children[i].style.color="green";
+// }
+//stretch
+//Update styles throughout the page as you see fit
+
+for(let i=0 ; i<navTarget.children.length; i++){
+  navTarget.children[i].style.fontWeight="bolder";
+}
+for(let i=0 ; i<navTarget.children.length; i++){
+  navTarget.children[i].style.fontSize="1.1rem";
+}
+
+for(let i=0 ; i<navTarget.children.length; i++){
+  navTarget.children[i].style.color="#2f3e46";
+}
+
+const buttonStyle = document.querySelector('button')
+buttonStyle.style.color = "#2f3e46";
+// buttonStyle.style.backgroundColor = "#edf2f4";
+buttonStyle.style.fontWeight = "bolder";
+
+const bodyStyle = document.querySelector('body')
+bodyStyle.style.fontFamily = "'Merriweather', serif"
+bodyStyle.style.fontFamily = "'Playfair Display', serif"
+bodyStyle.style.fontFamily = "'Roboto Condensed', sans-serif"
+bodyStyle.style.background = "whitesmoke"
+bodyStyle.style.backgroundPosition = "cover"
+// bodyStyle.style.backgroundSize = "200vh"
+ 
