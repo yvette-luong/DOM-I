@@ -94,10 +94,7 @@ contactParagraphs[2].textContent = siteContent.contact.email
 const footerParagraph = document.querySelector('footer p')
 footerParagraph.textContent = siteContent.footer.copyright;
 
-// const navBar = document.querySelectorAll('nav a');
-// navBar.style.color = 'green';
 
-// a.style.color = 'red';
 
 const newNav1 = document.createElement('a')
 newNav1.textContent = 'More Idea' ;
@@ -109,6 +106,33 @@ const navTarget = document.querySelector('nav');
 navTarget.appendChild(newNav1);
 navTarget.appendChild(newNav2); 
 
+// for(let i=0 ; i<navTarget.children.length; i++){
+//   navTarget.children[i].style.color="green";
+// }
+//stretch
+//Update styles throughout the page as you see fit
+
 for(let i=0 ; i<navTarget.children.length; i++){
-  navTarget.children[i].style.color="green";
+  navTarget.children[i].style.fontWeight="bolder";
 }
+for(let i=0 ; i<navTarget.children.length; i++){
+  navTarget.children[i].style.fontSize="1.1rem";
+}
+
+for(let i=0 ; i<navTarget.children.length; i++){
+  navTarget.children[i].style.color="#2f3e46";
+}
+
+const buttonStyle = document.querySelector('button')
+buttonStyle.style.color = "#2f3e46";
+// buttonStyle.style.backgroundColor = "#edf2f4";
+buttonStyle.style.fontWeight = "bolder";
+
+const bodyStyle = document.querySelector('body')
+bodyStyle.style.fontFamily = "'Merriweather', serif"
+bodyStyle.style.fontFamily = "'Playfair Display', serif"
+bodyStyle.style.fontFamily = "'Roboto Condensed', sans-serif"
+bodyStyle.style.background = "whitesmoke"
+bodyStyle.style.backgroundPosition = "cover"
+// bodyStyle.style.backgroundSize = "200vh"
+ 
